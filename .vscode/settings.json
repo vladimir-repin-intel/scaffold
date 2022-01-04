@@ -1,0 +1,28 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.detectIndentation": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.tabSize": 2,
+  "[less]": {
+    "editor.tabSize": 4
+  },
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "files.autoSave": "off",
+  "files.exclude": {
+    ".git": true,
+    "**/node_modules": true,
+    "**/.nyc_output": true,
+    "**/.cache": true,
+    "build*": true,
+    "bundle*": true,
+    "**/coverage": true,
+    "**/package-lock.json": true
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "cSpell.words": [
+    "preact"
+  ]
+}
