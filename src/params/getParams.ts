@@ -17,8 +17,9 @@ function getCliParams(): CliParams {
     console.log("params", argv);
     const packageName = argv._[argv._.length - 1];
     
+    const wd = argv.wd ?? process.cwd();
     return {
-        workingDir: argv.wd,
+        workingDir: wd,
         sourcePackageName: argv.from,
         packageName
     };

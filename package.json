@@ -9,8 +9,8 @@
     "bin"
   ],
   "scripts": {
-    "scaffold": "npm run build && npx gulp scaffold --gulpfile ./build/gulpfile.js --cwd .",
-    "scaffold-install": "npm run build && node build/scaffoldInstall/index --wd c:\\temp",
+    "scaffold": "node build/scaffold/index @analyzers/array --from typescript-library",
+    "scaffold-install": "node build/scaffoldInstall/index",
     "build": "npx tsc"
   },
   "repository": {

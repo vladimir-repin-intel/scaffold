@@ -7,8 +7,9 @@ export async function scaffold(): Promise<void> {
     throw new Error("pkg name and source are require, syntax: scaffold <pkg> --from <src>");
   }
   const srcPackage = await acquirePackage(params);
-  await copyFiles(srcPackage, params);
-  await npmInstall();
+  console.log(`pkg ${srcPackage} ready`);
+  // await copyFiles(srcPackage, params);
+  // await npmInstall();
 }
 
 scaffold()
