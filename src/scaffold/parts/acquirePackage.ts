@@ -1,6 +1,6 @@
-import { WorkingParams } from "../params";
-import { installPackage, updatePackage } from "../parts";
-import { getSrcPackageName } from "./parts/getSrcPackageName";
+import { WorkingParams } from "../../params";
+import { installPackage, updatePackage } from "../../parts";
+import { getSrcPackageName } from "./getSrcPackageName";
 
 export async function acquirePackage(params: WorkingParams): Promise<string> {
   const srcPackage = await getSrcPackageName(params);

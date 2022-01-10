@@ -1,6 +1,6 @@
 {
   "name": "@vlr2/scaffold",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "template scaffolding utility",
   "main": "index.js",
   "files": [
@@ -8,8 +8,12 @@
     "src",
     "bin"
   ],
+  "bin": {
+    "scaffold": "./bin/scaffold.js",
+    "scaffold-install": "./bin/scaffoldInstall.js"
+  },
   "scripts": {
-    "scaffold": "node build/scaffold/index @analyzers/array --from typescript-library",
+    "scaffold": "npm run build && node build/scaffold/index @analyzers/array --from typescript-library --wd c:/temp/testPkg",
     "scaffold-install": "node build/scaffoldInstall/index",
     "build": "npx tsc"
   },
@@ -25,8 +29,10 @@
   "homepage": "https://github.com/vladimir-repin-intel/scaffold#readme",
   "dependencies": {
     "@b08/spawn": "^3.0.6",
+    "@types/globby": "^9.1.0",
     "fs-extra": "^10.0.0",
-    "gulp": "^4.0.2",
+    "globby": "^11.1.0",
+    "simple-git": "^2.48.0",
     "yargs": "^17.3.0"
   },
   "devDependencies": {

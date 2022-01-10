@@ -13,8 +13,7 @@ export function getParams(): WorkingParams {
     }
 }
 
-function getCliParams(): CliParams {
-    console.log("params", argv);
+function getCliParams(): CliParams {    
     const packageName = argv._[argv._.length - 1];
     
     const wd = argv.wd ?? process.cwd();
