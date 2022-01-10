@@ -1,0 +1,44 @@
+{
+  "name": "@vlr2/scaffold",
+  "version": "1.1.0",
+  "description": "template scaffolding utility",
+  "main": "index.js",
+  "files": [
+    "build",
+    "src",
+    "bin"
+  ],
+  "bin": {
+    "scaffold": "./bin/scaffold.js",
+    "scaffold-install": "./bin/scaffoldInstall.js"
+  },
+  "scripts": {
+    "scaffold": "npm run build && node build/scaffold/index @analyzers/array --from typescript-library --wd c:/temp/testPkg",
+    "scaffold-install": "node build/scaffoldInstall/index",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimir-repin-intel/scaffold.git"
+  },
+  "author": "vladimir-repin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladimir-repin-intel/scaffold/issues"
+  },
+  "homepage": "https://github.com/vladimir-repin-intel/scaffold#readme",
+  "dependencies": {
+    "@b08/spawn": "^3.0.6",
+    "@types/globby": "^9.1.0",
+    "fs-extra": "^10.0.0",
+    "globby": "^11.1.0",
+    "simple-git": "^2.48.0",
+    "yargs": "^17.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^16.11.14",
+    "@types/yargs": "^17.0.7",
+    "typescript": "^4.5.3"
+  }
+}

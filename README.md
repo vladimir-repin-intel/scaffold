@@ -1,1 +1,1 @@
-# scaffold
+# @vlr2/scaffold
