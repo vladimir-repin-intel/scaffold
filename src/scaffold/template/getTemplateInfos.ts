@@ -1,4 +1,4 @@
-import { WorkingParams } from "../../../params";
+import { WorkingParams } from "../../params";
 import { getPackageList } from "./getPackageList";
 import { TemplateInfo } from "./templateInfo.type";
 import path from "path";

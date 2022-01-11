@@ -1,4 +1,4 @@
-import { WorkingParams } from "../../../params";
+import { WorkingParams } from "../../params";
 import fse from "fs-extra";
 import path from "path";
 

@@ -10,11 +10,13 @@
   ],
   "bin": {
     "scaffold": "./bin/scaffold.js",
-    "scaffold-install": "./bin/scaffoldInstall.js"
+    "scaffold-install": "./bin/scaffoldInstall.js",
+    "scaffold-update": "./bin/scaffoldUpdate.js"
   },
   "scripts": {
     "scaffold": "npm run build && node build/scaffold/index @analyzers/array --from typescript-library --wd c:/temp/testPkg",
     "scaffold-install": "node build/scaffoldInstall/index",
+    "scaffold-update": "npm run build && node build/scaffoldUpdate/index --wd c:/temp/testPkg",
     "build": "npx tsc"
   },
   "repository": {
