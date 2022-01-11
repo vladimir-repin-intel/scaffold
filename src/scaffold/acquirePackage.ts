@@ -1,5 +1,6 @@
-import { WorkingParams } from "../../params";
-import { installPackage, updatePackage } from "../../parts";
+import { WorkingParams } from "../params";
+import { installPackage } from "../scaffoldInstall/installPackage";
+import { updateNpmPackage } from "../scaffoldInstall/updatePackage";
 import { getSrcPackageName } from "./getSrcPackageName";
 
 export async function acquirePackage(params: WorkingParams): Promise<string> {
@@ -9,6 +10,6 @@ export async function acquirePackage(params: WorkingParams): Promise<string> {
     return params.cli.sourcePackageName;
   }
 
-  await updatePackage(srcPackage, params.scaffoldDir);
+  await updateNpmPackage(srcPackage, params.scaffoldDir);
   return srcPackage;
 }
