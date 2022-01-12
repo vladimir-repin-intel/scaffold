@@ -1,12 +1,12 @@
 import { WorkingParams } from "../../params";
-import { getPackageList } from "./getPackageList";
+import { getScaffoldPackageList } from "./getPackageList";
 import { TemplateInfo } from "./templateInfo.type";
 import path from "path";
 import fse from "fs-extra";
 import { getPackagePath } from "../getPkgPath";
 
 export async function getTemplateInfos(params: WorkingParams): Promise<TemplateInfo[]> {
-  const pkgs = await getPackageList(params);
+  const pkgs = await getScaffoldPackageList(params);
   const templates = await Promise.all(pkgs.map(p => getTemplateInfo(p, params)));
   return templates.filter(f => f != null);
 }

@@ -8,7 +8,7 @@ export async function scaffoldUpdate(): Promise<void> {
   const scaffoldInfo = await readScaffoldInfo(params);
   console.log(`Updating source template: ${scaffoldInfo.sourcePackage}`);
   await updateNpmPackage(scaffoldInfo.sourcePackage, params.scaffoldDir);
-  await updatePackageFromTemplate(params);
+  await updatePackageFromTemplate(scaffoldInfo, params);
 }
 
 scaffoldUpdate()

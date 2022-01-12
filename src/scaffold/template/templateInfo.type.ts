@@ -5,7 +5,7 @@ export interface TemplateInfo {
 }
 
 export interface UpdateRules {
-  // search globs
-  filesToUpdate: string[];
-  filesToDelete: string[];
+  // globs
+  patternsForUpdate: string[];
+  patternsForDelete: string[];
 }
